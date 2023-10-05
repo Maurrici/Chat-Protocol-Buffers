@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "name": "chat-protocol-buffers-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "protobufjs": "^7.2.5",
+    "readline-sync": "^1.4.10"
+  }
+}
