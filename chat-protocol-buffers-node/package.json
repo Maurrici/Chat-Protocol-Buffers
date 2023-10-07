@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "neo-blessed": "^0.2.0",
     "protobufjs": "^7.2.5",
     "readline-sync": "^1.4.10"
   }
