@@ -35,7 +35,7 @@ const port = 7000;
 
 // Socket
 const client = net.createConnection(port, host, () => {
-    let buffer = createMessage("/MENSAGEM", userName)
+    let buffer = createMessage("/ENTRAR", userName)
     client.write(buffer);
 
     client.on("data", (data) => {
@@ -72,6 +72,9 @@ const client = net.createConnection(port, host, () => {
                 text = `--------- ${message.message} ---------`
                 messageList.addItem(text);
                 break
+            case "/FECHADO":
+                screen.destroy()
+                console.log(message.message);
             case "/SAIR":
                 text = `--------- ${message.message} ---------`
                 messageList.addItem(text);
@@ -89,7 +92,7 @@ const client = net.createConnection(port, host, () => {
             let value = ""
     
             if(specialAction === "/NICK") {
-                value = text.replaceAll(specialAction).trim()
+                value = text.replaceAll(specialAction, "").trim()
             }
     
             let buffer = createMessage(action, value)
